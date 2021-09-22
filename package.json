@@ -1,6 +1,7 @@
 {
   "name": "my-store",
   "version": "0.0.0",
+  "description": "Third assignment for udacity course Full Stack Javascript developer",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -8,6 +9,11 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BenJoey/Udacity_MyStore.git"
+  },
+  "author": "Bence Bauer",
   "private": true,
   "dependencies": {
     "@angular/animations": "~12.2.0",
