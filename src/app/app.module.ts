@@ -7,6 +7,7 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { CartComponent } from './cart/cart.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ProductModule } from './product/product.module';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ProductModule } from './product/product.module';
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    ProductModule
+    ProductModule,
+    FlexLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]

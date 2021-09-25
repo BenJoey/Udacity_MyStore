@@ -1,4 +1,5 @@
 <h1>Products</h1>
-<ul>
-    <li *ngFor="let prod of productList">{{ prod.name }} has a price of {{ prod.price }}.</li>
-</ul>
+
+<div fxLayout="row">
+    <app-product *ngFor="let prod of productList" [product]="prod"></app-product>
+</div>
