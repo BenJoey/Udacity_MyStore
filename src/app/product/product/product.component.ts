@@ -23,4 +23,8 @@ export class ProductComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  onSubmit(): void {
+    alert("current quantity: " + this.product.quantity);
+  }
+
 }

@@ -4,4 +4,6 @@
         <img src="{{ product.url }}" width="210" height="280">
     </a>
     <p>{{ product.price }}$</p>
+    <input type="number" [(ngModel)]="product.quantity" min="1">
+    <button class=" btn btn-primary" style="margin-left: 10px;" type="submit" (click)="onSubmit()">Add to cart</button>
 </div>
