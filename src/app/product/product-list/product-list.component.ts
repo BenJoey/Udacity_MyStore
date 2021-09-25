@@ -15,4 +15,8 @@ export class ProductListComponent implements OnInit {
   ngOnInit(): void {
     this.productList = this.productsService.getProducts();
   }
+
+  onAdd(prod: Product): void {
+    alert("id: "+prod.id+" q: "+prod.quantity);
+  }
 }

@@ -2,6 +2,8 @@
     <li *ngFor="let prod of productList">
         <p>{{ prod.name }}</p>
         <p>Price: {{ prod.price }}</p>
+        Quantity: <input type="number" [(ngModel)]="prod.quantity" min="1">
+        <button class=" btn btn-primary" style="margin-left: 10px;" type="submit" (click)="onRemove(prod.id)">Remove from cart</button>
     </li>
 </ul>
 Total: {{ cartPrice }}$

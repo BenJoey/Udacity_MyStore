@@ -1,5 +1,5 @@
 <h1>Products</h1>
 
 <div fxLayout="row">
-    <app-product *ngFor="let prod of productList" [product]="prod"></app-product>
+    <app-product *ngFor="let prod of productList" [product]="prod" (added)="onAdd(prod)"></app-product>
 </div>

@@ -14,7 +14,7 @@ export class CartComponent implements OnInit {
   constructor(private productsService: ProductsService) { }
 
   ngOnInit(): void {
-    this.productList = this.productsService.getProducts();//.filter(p => p.quantity > 0);
+    this.productList = this.productsService.getProducts().filter(p => p.quantity > 0);
     this.calculatePrice();
   }
 
@@ -24,6 +24,10 @@ export class CartComponent implements OnInit {
       this.cartPrice += p.price * p.quantity;
     });
     this.cartPrice = Number(this.cartPrice.toFixed(2));
+  }
+
+  onRemove(id: number): void {
+    this.productList = this.productList.filter(p => p.id != id);
   }
 
 }
