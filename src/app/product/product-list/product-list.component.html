@@ -1,1 +1,4 @@
-<p>product-list works!</p>
+<h1>Products</h1>
+<ul>
+    <li *ngFor="let prod of productList">{{ prod.name }} has a price of {{ prod.price }}.</li>
+</ul>
