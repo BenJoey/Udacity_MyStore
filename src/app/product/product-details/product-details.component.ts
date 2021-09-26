@@ -31,7 +31,7 @@ export class ProductDetailsComponent implements OnInit {
   }
 
   onAdded() {
-    this.productsService.setQuantity(this.product.id, this.quantity);
+    this.productsService.addQuantity(this.product.id, this.quantity);
     alert("Item added to cart");
   }
 

@@ -24,10 +24,17 @@ export class ProductsService {
     return this.productList.find(p => p.id == id) ?? this.productList[0];
   }
 
-  setQuantity(id:number, q: number) {
+  addQuantity(id:number, q: number) {
     let prod = this.productList.find(p => p.id == id);
     if (prod != undefined) {
       prod.quantity += q;
+    }
+  }
+
+  clearQuantity(id: number) {
+    let prod = this.productList.find(p => p.id == id);
+    if (prod != undefined) {
+      prod.quantity = 0;
     }
   }
 }
