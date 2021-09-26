@@ -37,4 +37,10 @@ export class ProductsService {
       prod.quantity = 0;
     }
   }
+
+  clearCart(): void {
+    for(let item of this.productList) {
+      item.quantity = 0;
+    }
+  }
 }

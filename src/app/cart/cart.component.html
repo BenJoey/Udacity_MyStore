@@ -13,5 +13,5 @@
         </ul>
         <p class="price">Total: {{ cartPrice }}$</p>
     </div>
-    <app-submit-order class="order"></app-submit-order>
+    <app-submit-order class="order" (submitted)="onSubmit()"></app-submit-order>
 </div>

@@ -32,4 +32,10 @@ export class CartComponent implements OnInit {
     this.calculatePrice();
   }
 
+  onSubmit(): void {
+    this.productsService.clearCart();
+    this.productList = [];
+    this.cartPrice = 0;
+  }
+
 }
