@@ -9,6 +9,7 @@ import { CartComponent } from './cart/cart.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ProductModule } from './product/product.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { HttpClientModule } from '@angular/common/http';
 import { SubmitOrderComponent } from './submit-order/submit-order.component';
 
 @NgModule({
@@ -24,7 +25,8 @@ import { SubmitOrderComponent } from './submit-order/submit-order.component';
     NgbModule,
     ProductModule,
     FlexLayoutModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

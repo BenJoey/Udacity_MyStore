@@ -1,23 +1,28 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Product } from '../models/Product';
-import { ProductsService } from '../services/products.service';
+import { CartService } from '../services/cart.service';
 
 @Component({
   selector: 'app-cart',
   templateUrl: './cart.component.html',
   styleUrls: ['./cart.component.css']
 })
-export class CartComponent implements OnInit {
+export class CartComponent implements OnInit, OnDestroy {
   productList: Product[] = [];
   cartPrice: number = 0;
+  submitted: boolean = false;
 
-  constructor(private productsService: ProductsService) {}
+  constructor(private cartService: CartService) {}
 
   ngOnInit(): void {
-    this.productList = this.productsService
-      .getProducts()
-      .filter((p) => p.quantity > 0);
+    this.productList = this.cartService.getCart();
     this.calculatePrice();
+  }
+
+  ngOnDestroy(): void {
+    if(this.submitted){
+      this.cartService.clearCart();
+    }
   }
 
   calculatePrice() {
@@ -30,13 +35,12 @@ export class CartComponent implements OnInit {
 
   onRemove(id: number): void {
     this.productList = this.productList.filter((p) => p.id != id);
-    this.productsService.clearQuantity(id);
+    this.cartService.removeProduct(id);
     this.calculatePrice();
   }
 
   onSubmit(): void {
-    this.productsService.clearCart();
-    this.productList = [];
-    this.cartPrice = 0;
+    this.submitted = true;
   }
+
 }

@@ -9,7 +9,6 @@ import { Product } from 'src/app/models/Product';
 export class ProductComponent implements OnInit {
   @Input() product: Product;
   @Output() added = new EventEmitter();
-  quantity: number = 0;
 
   constructor() {
     this.product = {
@@ -23,8 +22,4 @@ export class ProductComponent implements OnInit {
   }
 
   ngOnInit(): void {}
-
-  onAdded(): void {
-    this.added.emit(this.quantity);
-  }
 }

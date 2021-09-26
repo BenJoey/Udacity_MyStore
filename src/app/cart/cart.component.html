@@ -6,12 +6,16 @@
                 <div class="item">
                     <p style="font-weight: bold;">{{ prod.name }}</p>
                     Price: {{ prod.price }}<br>
-                    Amount: <input type="number" [(ngModel)]="prod.quantity" min="1" (change)="calculatePrice()" style="text-align: center; width: 16%;">
-                    <button class=" btn btn-primary" style="margin-left: 10px;" type="submit" (click)="onRemove(prod.id)">Remove from cart</button>
+                    Amount: <input type="number" [disabled]="submitted" [(ngModel)]="prod.quantity" min="1" (ngModelChange)="calculatePrice()" style="text-align: center; width: 16%;">
+                    <button class=" btn btn-primary" [hidden]="submitted" style="margin-left: 10px;" type="submit" (click)="onRemove(prod.id)">Remove from cart</button>
                 </div>
             </li>
         </ul>
         <p class="price">Total: {{ cartPrice }}$</p>
     </div>
-    <app-submit-order class="order" (submitted)="onSubmit()"></app-submit-order>
+    <app-submit-order class="order" (submitted)="onSubmit()" *ngIf="!submitted"></app-submit-order>
+    <div *ngIf="submitted" class="order">
+        <p>Order completed.</p>
+        <button class=" btn btn-primary" style="margin-left: 10px;" routerLink="/">Done</button>
+    </div>
 </div>
