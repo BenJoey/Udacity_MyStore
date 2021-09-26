@@ -18,6 +18,7 @@ export class SubmitOrderComponent implements OnInit {
   onSubmit(): void {
     if (!this.creditcardnumber.match(/^[0-9]+$/)) {
       alert('Invalid credit card number');
+      return;
     }
     this.submitted.emit();
   }
