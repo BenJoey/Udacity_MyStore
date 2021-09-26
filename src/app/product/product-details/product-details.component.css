@@ -17,3 +17,11 @@ img {
   margin-left: 5%;
   vertical-align: middle;
 }
+
+input {
+  display: block;
+  margin-left: 24%;
+  margin-bottom: 24px;
+  text-align: center;
+  width: 50%;
+}
