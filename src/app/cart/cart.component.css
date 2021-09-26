@@ -14,12 +14,15 @@
   margin-left: 20%;
 }
 
+.container {
+  display: flex;
+}
+
 img {
   display: inline-block;
-  margin-left: 20%;
   margin-top: 2%;
-  width: 7%;
-  height: 14%;
+  width: 10%;
+  height: 20%;
 }
 
 ul {
