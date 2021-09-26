@@ -10,8 +10,9 @@ import { ProductsService } from 'src/app/services/products.service';
 })
 export class ProductDetailsComponent implements OnInit {
   product: Product;
+  quantity: number = 0;
 
-  constructor(private activatedRoute: ActivatedRoute, productsService: ProductsService) {
+  constructor(private activatedRoute: ActivatedRoute, private productsService: ProductsService) {
     this.product = {
       id: 0,
       name: '',
@@ -27,6 +28,11 @@ export class ProductDetailsComponent implements OnInit {
   }
 
   ngOnInit(): void {
+  }
+
+  onAdded() {
+    this.productsService.setQuantity(this.product.id, this.quantity);
+    alert("Item added to cart");
   }
 
 }
