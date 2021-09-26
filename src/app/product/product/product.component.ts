@@ -26,8 +26,7 @@ export class ProductComponent implements OnInit {
   }
 
   onAdded(): void {
-    this.product.quantity += this.quantity;
-    this.added.emit(this.product);
+    this.added.emit(this.quantity);
   }
 
 }
