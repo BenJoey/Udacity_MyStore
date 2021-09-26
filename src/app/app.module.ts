@@ -9,12 +9,14 @@ import { CartComponent } from './cart/cart.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ProductModule } from './product/product.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { SubmitOrderComponent } from './submit-order/submit-order.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavBarComponent,
-    CartComponent
+    CartComponent,
+    SubmitOrderComponent
   ],
   imports: [
     BrowserModule,
