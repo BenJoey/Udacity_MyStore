@@ -11,20 +11,18 @@ export class SubmitOrderComponent implements OnInit {
   creditcardnumber: string = '';
   @Output() submitted = new EventEmitter();
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   onSubmit(): void {
-    if(!this.creditcardnumber.match(/^[0-9]+$/)) {
-      alert("Invalid credit card number");
+    if (!this.creditcardnumber.match(/^[0-9]+$/)) {
+      alert('Invalid credit card number');
     }
 
     //Do anything here with the order and the user deatils
 
     this.submitted.emit();
-    alert("Order submitted!");
+    alert('Order submitted!');
   }
-
 }

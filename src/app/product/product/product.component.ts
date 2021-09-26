@@ -18,15 +18,13 @@ export class ProductComponent implements OnInit {
       price: 0,
       url: '',
       description: '',
-      quantity: 0,
-    }
+      quantity: 0
+    };
   }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   onAdded(): void {
     this.added.emit(this.quantity);
   }
-
 }

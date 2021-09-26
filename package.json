@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "description": "Third assignment for udacity course Full Stack Javascript developer",
   "scripts": {
+    "prettier": "prettier --config .prettierrc \"src/**/*.ts\" --write",
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
@@ -45,6 +46,7 @@
     "karma-coverage": "~2.0.3",
     "karma-jasmine": "~4.0.0",
     "karma-jasmine-html-reporter": "~1.7.0",
+    "prettier": "^2.3.2",
     "typescript": "~4.3.5"
   }
 }

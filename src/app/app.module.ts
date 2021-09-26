@@ -29,4 +29,4 @@ import { SubmitOrderComponent } from './submit-order/submit-order.component';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

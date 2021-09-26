@@ -11,23 +11,25 @@ export class CartComponent implements OnInit {
   productList: Product[] = [];
   cartPrice: number = 0;
 
-  constructor(private productsService: ProductsService) { }
+  constructor(private productsService: ProductsService) {}
 
   ngOnInit(): void {
-    this.productList = this.productsService.getProducts().filter(p => p.quantity > 0);
+    this.productList = this.productsService
+      .getProducts()
+      .filter((p) => p.quantity > 0);
     this.calculatePrice();
   }
 
   calculatePrice() {
     this.cartPrice = 0;
-    this.productList.map(p => {
+    this.productList.map((p) => {
       this.cartPrice += p.price * p.quantity;
     });
     this.cartPrice = Number(this.cartPrice.toFixed(2));
   }
 
   onRemove(id: number): void {
-    this.productList = this.productList.filter(p => p.id != id);
+    this.productList = this.productList.filter((p) => p.id != id);
     this.productsService.clearQuantity(id);
     this.calculatePrice();
   }
@@ -37,5 +39,4 @@ export class CartComponent implements OnInit {
     this.productList = [];
     this.cartPrice = 0;
   }
-
 }

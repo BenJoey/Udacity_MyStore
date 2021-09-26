@@ -12,27 +12,28 @@ export class ProductDetailsComponent implements OnInit {
   product: Product;
   quantity: number = 0;
 
-  constructor(private activatedRoute: ActivatedRoute, private productsService: ProductsService) {
+  constructor(
+    private activatedRoute: ActivatedRoute,
+    private productsService: ProductsService
+  ) {
     this.product = {
       id: 0,
       name: '',
       price: 0,
       url: '',
       description: '',
-      quantity: 0,
-    }
-    this.activatedRoute.params.subscribe(params => {
+      quantity: 0
+    };
+    this.activatedRoute.params.subscribe((params) => {
       let id = params['id'];
       this.product = productsService.getProduct(id);
     });
   }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   onAdded() {
     this.productsService.addQuantity(this.product.id, this.quantity);
-    alert("Item added to cart");
+    alert('Item added to cart');
   }
-
 }

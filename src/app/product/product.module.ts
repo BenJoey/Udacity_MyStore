@@ -13,11 +13,6 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
     ProductComponent,
     ProductDetailsComponent
   ],
-  imports: [
-    CommonModule,
-    AppRoutingModule,
-    FormsModule,
-    FlexLayoutModule
-  ]
+  imports: [CommonModule, AppRoutingModule, FormsModule, FlexLayoutModule]
 })
-export class ProductModule { }
+export class ProductModule {}

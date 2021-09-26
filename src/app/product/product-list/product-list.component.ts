@@ -10,7 +10,7 @@ import { ProductsService } from 'src/app/services/products.service';
 export class ProductListComponent implements OnInit {
   productList: Product[] = [];
 
-  constructor(private productsService: ProductsService) { }
+  constructor(private productsService: ProductsService) {}
 
   ngOnInit(): void {
     this.productList = this.productsService.getProducts();
@@ -18,6 +18,6 @@ export class ProductListComponent implements OnInit {
 
   onAdd(prod: Product, q: number): void {
     this.productsService.addQuantity(prod.id, q);
-    alert("Item added to cart");
+    alert('Item added to cart');
   }
 }
