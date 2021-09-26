@@ -1,0 +1,27 @@
+.cart {
+  display: inline-block;
+}
+
+.item {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 3%;
+}
+
+.price {
+  font-weight: bold;
+  font-size: 26px;
+  margin-left: 20%;
+}
+
+img {
+  display: inline-block;
+  margin-left: 20%;
+  margin-top: 2%;
+  width: 7%;
+  height: 14%;
+}
+
+ul {
+  list-style-type: none;
+}

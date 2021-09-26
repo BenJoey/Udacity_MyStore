@@ -28,6 +28,8 @@ export class CartComponent implements OnInit {
 
   onRemove(id: number): void {
     this.productList = this.productList.filter(p => p.id != id);
+    this.productsService.clearQuantity(id);
+    this.calculatePrice();
   }
 
 }
