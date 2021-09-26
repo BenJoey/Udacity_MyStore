@@ -12,4 +12,8 @@ export class SubmitOrderComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  onSubmit() {
+    alert("Order submitted!");
+  }
+
 }
