@@ -1,8 +1,8 @@
-<div>
-    <h3>{{ product.name }}</h3>
-    <img src="{{ product.url }}" width="210" height="280">
-    <p>{{ product.price }}$</p>
-    <p>{{ product.description }}</p>
-    <input type="number" min="1" [(ngModel)]="quantity">
-    <button class=" btn btn-primary" style="margin-left: 10px;" type="submit" (click)="onAdded()">Add to cart</button>
+<img src="{{ product.url }}">
+<div class="box">
+    <h3 class="t">{{ product.name }}</h3>
+    <h4 class="t">{{ product.price }}$</h4>
+    <p class="t">{{ product.description }}</p>
+    <input type="number" min="1" [(ngModel)]="quantity" style="display: block; margin-left: auto; margin-bottom: 24px;">
+    <button class=" btn btn-primary" style="display: block; margin-left: auto; margin-right: auto;" type="submit" (click)="onAdded()">Add to cart</button>
 </div>

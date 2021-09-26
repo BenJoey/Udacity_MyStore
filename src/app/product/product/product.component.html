@@ -1,9 +1,9 @@
 <div>
-    <h3>{{ product.name }}</h3>
+    <h3 class="t">{{ product.name }}</h3>
     <a routerLink="products/{{ product.id }}">
         <img src="{{ product.url }}" width="210" height="280">
     </a>
-    <p>{{ product.price }}$</p>
-    <input type="number" min="1" [(ngModel)]="quantity">
-    <button class=" btn btn-primary" style="margin-left: 10px;" type="submit" (click)="onAdded()">Add to cart</button>
+    <p class="t">{{ product.price }}$</p>
+    <input type="number" min="1" [(ngModel)]="quantity" style="margin: auto; display: block;"><br>
+    <button class="btn btn-primary" style="display: block; margin: auto;" type="submit" (click)="onAdded()">Add to cart</button>
 </div>

@@ -1,0 +1,19 @@
+.t {
+  text-align: center;
+  font-weight: bold;
+}
+
+img {
+  display: inline-block;
+  border: 3px solid cyan;
+  margin-left: 30%;
+  margin-top: 5%;
+  width: 20%;
+  height: 30%;
+}
+
+.box {
+  display: inline-block;
+  margin-left: 5%;
+  vertical-align: middle;
+}
