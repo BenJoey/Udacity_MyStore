@@ -27,6 +27,11 @@
   margin-left: 20%;
 }
 
+.success {
+  text-align: center;
+  vertical-align: middle;
+}
+
 img {
   margin-top: 2%;
   width: 20%;
